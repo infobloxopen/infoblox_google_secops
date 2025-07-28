@@ -393,16 +393,16 @@ Insight Input - Insight id from the user or automation.
   - Collects the relevant security events from the given insight id. 
 
 - Get SOC Insight Assets (action)
-  - Collects the relevant asset data from the given insight id. 
+  - Collects the relevant asset data from the given insight id. The default value of `Threat Level` and `Confidence Level` parameter is set to `High`.
 
 - Get SOC Insight Indicators (action)
-  - Collects the relevant indicators from the given insight id.  The default value for confidence parameter is set to 50.
+  - Collects the relevant indicators from the given insight id. The default value for `Confidence` parameter is set to `50`.
 
 - Get SOC Insight Comments (action)
   - Collects the relevant comments from the given insight id. 
 
 - Suspicious Event Insight (condition)
-  - After performing the insight lookup, the playbook checks if a threatLevelis available in the results. 
+  - After performing the insight lookup, the playbook checks if a threatLevel is available in the results. 
   - If the `threatLevel` is `High` or `Medium`, it indicates a high-risk or confirmed suspicious event. 
 
 - Change Case Priority to Critical (action)
