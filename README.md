@@ -396,7 +396,7 @@ Insight Input - Insight id from the user or automation.
   - Collects the relevant asset data from the given insight id. 
 
 - Get SOC Insight Indicators (action)
-  - Collects the relevant indicators from the given insight id. 
+  - Collects the relevant indicators from the given insight id.  The default value for confidence parameter is set to 50.
 
 - Get SOC Insight Comments (action)
   - Collects the relevant comments from the given insight id. 
@@ -432,7 +432,7 @@ Threat Level - Threat Level value from the user or automation.
 **Flow:**
 
 - Check Threat Level (condition)
-  - This is a condition that determines if the input Threat Level value is exceeds the configured threshold or not.
+  - This is a condition that determines if the input Threat Level value is exceeds the configured threshold or not. The default value is set to 80.
   - If the it exceeds the threshold, the branch with adding comment and changing the case priority to Critical will be executed.
 
 - Add Comment in Case (action)
