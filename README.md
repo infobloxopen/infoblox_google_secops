@@ -215,7 +215,7 @@ This playbook used to automate SOC incident response with severity-based notific
   - This block is used to get the Insight ID input from the User [here](#is-ip-suspicious).
 
 - Incident Response on SOC Insight Block
-  - This block is used to identify the suspiciousness of the insight from its events and creates a Service Now Incident if the insight event found to be suspicious [here](#incident-response-on-soc-insight-block).
+  - This block is used to identify the suspiciousness of the insight and creates a Service Now Incident if the insight found to be suspicious. [here](#incident-response-on-soc-insight-block).
 
 ---
 
@@ -402,17 +402,17 @@ Insight Input - Insight id from the user or automation.
   - Collects the relevant comments from the given insight id. 
 
 - Suspicious Event Insight (condition)
-  - After performing the insight lookup, the playbook checks if a threatLevel is available in the results. 
-  - If the `threatLevel` is `High` or `Medium`, it indicates a high-risk or confirmed suspicious event. 
+  - After performing the insight lookup, the playbook checks if a `priorityText` is available in the Event. 
+  - If the `priorityText` is `HIGH` or `MEDIUM` or `CRITICAL`, it indicates a high-risk or confirmed suspicious event. 
 
 - Change Case Priority to Critical (action)
-  - When the `threatLevel` value is `High` or `Medium`, this action automatically updates the case priority to **Critical** in Siemplify. 
+  - When the `priorityText` value is `HIGH` or `MEDIUM`  or `CRITICAL`, this action automatically updates the case priority to **Critical** in Siemplify. 
 
 - ServiceNow Create Incident (action)
-  - When the `threatLevel` value is `High` or `Medium`, this action automatically creates a ServiceNow ticket for further investigation. 
+  - When the `priorityText` value is `HIGH` or `MEDIUM`  or `CRITICAL`, this action automatically creates a ServiceNow ticket for further investigation. 
 
 - Change Case Priority to Informative (action)
-  - When the `threatLevel` is `Low`, this action automatically updates the case priority to **Informative** in Siemplify. 
+  - When the `priorityText` is `LOW`, this action automatically updates the case priority to **Informative** in Siemplify. 
 
 **Note:** 
   - All the response from the actions will be saved to the widgets. Will be shown to the Alert Overview page inside Google SecOps Case for later use.
@@ -495,9 +495,4 @@ In case of any failures when running any playbook, we can debug the same by runn
 
 - Google SecOps playbooks - [Documentation](https://cloud.google.com/chronicle/docs/secops/google-secops-soar-toc#work-with-playbooks)
 - Create views with playbooks - [Documentation](https://cloud.google.com/chronicle/docs/soar/respond/working-with-playbooks/define-customized-alert-views-from-playbook-designer)
-- Limitations around for-loop usage in playbooks:
-  - [Cycle over a list](https://www.googlecloudcommunity.com/gc/SOAR-Forum/Cycling-over-a-list-in-a-playbook/m-p/642352)
-  - [Iterate through a JSON list](https://www.googlecloudcommunity.com/gc/SOAR-Forum/Iterate-through-a-json-list/m-p/821359#M2891)
-  - [Looping in Playbooks](https://www.googlecloudcommunity.com/gc/SOAR-Forum/Loop-in-a-PB-through-a-list-fetched-using-http-get-connector/m-p/639073)
-  - [Functions that require single input](https://www.googlecloudcommunity.com/gc/SOAR-Forum/Functions-that-require-single-input/m-p/639027)
 - Infoblox Threat Defense with DDI SecOps SOAR Integration - [User Guide](https://docs.infoblox.com/space/DeploymentGuideTDDDI4GoogleSecOpsSOAR/1570111546/Introduction)
