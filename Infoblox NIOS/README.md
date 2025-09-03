@@ -153,7 +153,7 @@ Automate the enrichment of IP addresses by leveraging Infoblox NIOS and asset in
 
 ### Host Lookup
 
-Automate the enrichment of Host by leveraging Infoblox NIOS and asset information, enabling rapid and comprehensive insights into host data. [Download](<./playb  ooks/Host Lookup.zip>)
+Automate the enrichment of Host by leveraging Infoblox NIOS and asset information, enabling rapid and comprehensive insights into host data. [Download](<./playbooks/Host Lookup.zip>)
 
 ![Playbook - Host Lookup](<./screenshots/playbooks/Host Lookup.png>)
 
