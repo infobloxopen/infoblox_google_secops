@@ -1,6 +1,12 @@
-# Infoblox Google SecOps SOAR Integrations
+# Infoblox Google SecOps Parser and Integrations
 
-This repository contains sample playbooks and integration guides for leveraging Infoblox solutions within the Google SecOps SOAR platform. Each integration helps automate enrichment, response, threat intelligence, and asset management workflows to enhance your security operations.
+This repository contains SEIM parser, sample playbooks and integration guides for leveraging Infoblox solutions within the Google SecOps platform. Each integration helps automate enrichment, response, threat intelligence, and asset management workflows to enhance your security operations.
+
+## Parser
+
+### 1. Infoblox Parser
+Google SecOps SIEM custom parser for Infoblox Cloud logs.
+- **Documentation:** [Infoblox Log Forwarding to Google SecOps SIEM](https://docs.infoblox.com/space/DeploymentGuideLogtoGoogleSecOps)
 
 ## Integrations
 
